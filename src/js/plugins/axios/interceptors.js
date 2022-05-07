@@ -19,7 +19,6 @@ function setToken(req) {
   const isAuthUrl = req.url.includes("auth");
 
   if (!isAuthUrl) {
-    console.log("go");
     const token = localStorage.getItem(lsTokenKey);
     req.headers["x-access-token"] = token;
   }
